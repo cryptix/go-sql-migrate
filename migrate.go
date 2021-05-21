@@ -189,12 +189,7 @@ func (d OracleDialect) IfTableExists(command, schema, table string) string {
 }
 
 var MigrationDialects = map[string]gorp.Dialect{
-	"sqlite3":  gorp.SqliteDialect{},
-	"postgres": gorp.PostgresDialect{},
-	"mysql":    gorp.MySQLDialect{Engine: "InnoDB", Encoding: "UTF8"},
-	"mssql":    gorp.SqlServerDialect{},
-	"oci8":     OracleDialect{},
-	"godror":   OracleDialect{},
+	"sqlite3": gorp.SqliteDialect{},
 }
 
 type MigrationSource interface {
